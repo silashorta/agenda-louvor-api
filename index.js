@@ -4,16 +4,13 @@ const routes = require("../db/routes"); // Certifique-se de que este caminho est
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // Middleware para parsear JSON
-
+app.use(express.json());
 
 routes(app);
 
-
-const porta = 3000;
-
-app.listen(porta, () => {
-  console.log("Rodando servidor na porta " + porta);
+app.get("/", (req, res) => {
+  res.send("API está funcionando!");
 });
 
+// Não usamos app.listen aqui, pois o Vercel cuida da execução
 module.exports = app;
