@@ -9,6 +9,7 @@ app.use(express.json()); // Middleware para parsear JSON
 
 routes(app);
 
+
 const porta = 3000;
 
 app.listen(porta, () => {
