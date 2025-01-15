@@ -1,19 +1,13 @@
 const express = require("express");
 const cors = require("cors");
-const routes = require("./routes"); // Certifique-se de que este caminho está correto
+const routes = require("./routes");
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // Middleware para parsear JSON
+app.use(express.json());
 
-
+// Defina as rotas
 routes(app);
 
-
-const porta = 3000;
-
-app.listen(porta, () => {
-  console.log("Rodando servidor na porta " + porta);
-});
-
+// Exporte o servidor para o Vercel
 module.exports = app;
