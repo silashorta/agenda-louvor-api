@@ -1,15 +1,17 @@
-const express = require("express");
-const cors = require("cors");
-const routes = require("./routes"); // Caminho relativo para as rotas
 
+
+
+
+const express = require("express");
+const routes = require("./routes"); 
 const app = express();
 
-// Middlewares
-app.use(cors());
 app.use(express.json());
 
-// Registrar as rotas
 routes(app);
 
-// Exportar o servidor para que a Vercel possa utilizá-lo
+app.get("/", (req, res) => {
+  res.send("Hello from Vercel!");
+});
+
 module.exports = app;
