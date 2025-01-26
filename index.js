@@ -1,32 +1,15 @@
-/* const express = require("express");
+const express = require("express");
 const cors = require("cors");
 const routes = require("./routes"); // Caminho relativo para as rotas
 
 const app = express();
 
+// Middlewares
 app.use(cors());
-app.use(express.json()); // Middleware para parsear JSON
-
- // Registrar as rotas
-routes(app);
-
-// Porta será gerenciada pela Vercel automaticamente
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
-
-module.exports = app;
- */
-
-const express = require("express");
-const app = express();
-
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello from Vercel!");
-});
+// Registrar as rotas
+routes(app);
 
+// Exportar o servidor para que a Vercel possa utilizá-lo
 module.exports = app;
