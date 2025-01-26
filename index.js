@@ -7,8 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Middleware para parsear JSON
 
-/* // Registrar as rotas
-routes(app); */
+ // Registrar as rotas
+routes(app);
 
 // Porta será gerenciada pela Vercel automaticamente
 const PORT = process.env.PORT || 3000;
