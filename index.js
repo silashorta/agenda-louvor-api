@@ -1,4 +1,4 @@
-const express = require("express");
+/* const express = require("express");
 const cors = require("cors");
 const routes = require("./routes"); // Caminho relativo para as rotas
 
@@ -15,6 +15,18 @@ const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
+});
+
+module.exports = app;
+ */
+
+const express = require("express");
+const app = express();
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Hello from Vercel!");
 });
 
 module.exports = app;
