@@ -15,11 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
+    "username": "adminmb02",
     "password": "se200294",
-    "database": "louvor_prod",
-    "host": "127.0.0.1",
-    "port": 3306,
+    "database": "adminmb02",
+    "host": "mysql.adminmb.kinghost.net",
     "dialect": "mysql"
   }
 }
