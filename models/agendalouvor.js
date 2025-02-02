@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     teclado: DataTypes.STRING,
     vocal1: DataTypes.STRING,
     vocal2: DataTypes.STRING,
+    vocal3: DataTypes.STRING,
     ministro: DataTypes.STRING,
     culto: DataTypes.STRING,
     kids1: DataTypes.STRING, // Nova coluna kids1
